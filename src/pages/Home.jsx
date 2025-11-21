@@ -19,7 +19,7 @@ const Home = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.5 }}
       >
-        Hello, I'm <span className="text-blue-600 dark:text-blue-400">Cyberflex</span>
+        Hello, I'm <span className="text-blue-600 dark:text-blue-400">Ollykay</span>
       </motion.h1>
       <motion.p
         className="mt-3 text-gray-600 dark:text-gray-300 max-w-xl"
@@ -27,8 +27,7 @@ const Home = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.6 }}
       >
-        A passionate Cybersecurity Enthusiast & Full-Stack Developer.  
-        I love building secure, modern web applications and teaching others how to protect digital systems.
+        A passionate cybersecurity enthusiast dedicated to protecting digital landscapes and empowering users through secure solutions.and empowering users through secure solutions.
       </motion.p>
 
       <motion.div

@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-white dark:bg-gray-950 transition-colors duration-300">
       <motion.img
-        src="/src/assets/my p img.jpg"
+        src="/assets/my p img.jpg"
         alt="Profile"
         className="w-40 h-40 rounded-full border-4 border-blue-500 mb-6 shadow-lg"
         initial={{ opacity: 0, scale: 0.8 }}

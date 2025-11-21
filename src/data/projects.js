@@ -2,7 +2,7 @@ const projects = [
   {
     id: 1,
      title: "A Cybersecurity Portfolio",
-    image: "/public/images/port.png",
+    image: "/images/port.png",
     description:
       "A personal portfolio website showcasing cybersecurity projects, skills, and experience. ",
     tech: [ "react", "Tailwind CSS"],
@@ -12,7 +12,7 @@ const projects = [
   {
     id: 2,
     title: "Password Strength Checker",
-    image: "/public/images/password strength checker.png",
+    image: "/images/password strength checker.png",
     description:
       "A web app that evaluates password strength and provides suggestions for improvement.And helps users create secure passwords.",
     tech: ["Next.js", "Tailwind CSS", "OpenAI API"],
@@ -22,7 +22,7 @@ const projects = [
   {
     id: 3,
     title: "Cybersecurity Dashboard",
-    image: "/public/images/dash.png",
+    image: "/images/dash.png",
     description:
       "A Cybersecurity dashboard that list some tool used in cybersecurity with details,Build a cybersecurity dashboard that visualizes threat,",
     tech: ["React", "Vite", "Tailwind CSS", "lucide icons"],
@@ -32,7 +32,7 @@ const projects = [
   {
     id: 4,
    title: "Cloud IP Infomation Tracker",
-    image: "/Public/images/ip finder.png",
+    image: "/images/ip finder.png",
     description:
       "A web app that tracks and displays IP information using cloud services. Built with React for the frontend and Firebase for backend services.",
     tech: ["Css", "Html", "python"],

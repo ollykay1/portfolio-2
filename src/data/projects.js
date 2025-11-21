@@ -1,54 +1,45 @@
 const projects = [
   {
     id: 1,
-    title: "QR Code Attendance System",
-    image: "/images/projects/qr-attendance.png",
+     title: "A Cybersecurity Portfolio",
+    image: "/public/images/port.png",
     description:
-      "A real-time attendance tracking system using QR codes and Firebase. Built with React, Vite, and Firestore for real-time updates.",
-    tech: ["React", "Firebase", "Tailwind CSS", "Vite"],
-    link: "https://cyberflex-attendance.vercel.app",
-    github: "https://github.com/Cyb3rflex/qr-attendance-system",
+      "A personal portfolio website showcasing cybersecurity projects, skills, and experience. ",
+    tech: [ "react", "Tailwind CSS"],
+    link: "https://portfolio-2-ecak46dps-olly-kays-projects.vercel.app/",
+    github: "https://github.com/ollykay1/portfolio-2.git",
   },
   {
     id: 2,
-    title: "PagePilot AI",
-    image: "/images/projects/pagepilot.png",
+    title: "Password Strength Checker",
+    image: "/public/images/password strength checker.png",
     description:
-      "An AI-powered landing page generator with one-click deployment and a drag-and-drop editor. Frontend-only project built with Next.js.",
+      "A web app that evaluates password strength and provides suggestions for improvement.And helps users create secure passwords.",
     tech: ["Next.js", "Tailwind CSS", "OpenAI API"],
-    link: "https://pagepilot.vercel.app",
-    github: "https://github.com/Cyb3rflex/pagepilot",
+    link: "https://password-strength-checker-ruby.vercel.app/",
+    github: "https://github.com/ollykay1/password-strength-checker.git",
   },
   {
     id: 3,
-    title: "YouTube Summarizer & Translator",
-    image: "/images/projects/youtube-summarizer.png",
+    title: "Cybersecurity Dashboard",
+    image: "/public/images/dash.png",
     description:
-      "A web app that summarizes and translates YouTube videos using AI. Ideal for quick learning and accessibility.",
-    tech: ["React", "Rapid API", "Tailwind CSS"],
-    link: "https://yt-summary-ai.vercel.app",
-    github: "https://github.com/Cyb3rflex/youtube-summarizer",
+      "A Cybersecurity dashboard that list some tool used in cybersecurity with details,Build a cybersecurity dashboard that visualizes threat,",
+    tech: ["React", "Vite", "Tailwind CSS", "lucide icons"],
+    link: "https://cybersecurity-dashboard-octh.vercel.app/",
+    github: "https://github.com/ollykay1/Cybersecurity-dashboard.git",
   },
   {
     id: 4,
-    title: "Pentest Lab Demo",
-    image: "/images/projects/pentest-lab.png",
+   title: "Cloud IP Infomation Tracker",
+    image: "/Public/images/ip finder.png",
     description:
-      "A mini pentesting environment showcasing vulnerable and secure Node.js apps for ethical hacking exercises.",
-    tech: ["Node.js", "Express", "Docker"],
-    link: "https://github.com/Cyb3rflex/pentest-lab",
-    github: "https://github.com/Cyb3rflex/pentest-lab",
+      "A web app that tracks and displays IP information using cloud services. Built with React for the frontend and Firebase for backend services.",
+    tech: ["Css", "Html", "python"],
+    link: "https://cloud-ip-checker.vercel.app/",
+    github: "https://github.com/ollykay1/cloud-IP-checker.git",
   },
-  {
-    id: 5,
-    title: "The Ultimate Money-Saving Blueprint",
-    image: "/images/projects/money-blueprint.png",
-    description:
-      "A digital financial toolkit including a budgeting Excel template and a visually designed PDF guide for smart financial planning.",
-    tech: ["Canva", "Excel", "Marketing Strategy"],
-    link: "https://cyberflex-blueprint.vercel.app",
-    github: "https://github.com/Cyb3rflex/money-blueprint",
-  },
+  
 ];
 
 export default projects;

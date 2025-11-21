@@ -1,1 +1,15 @@
-/* global styles */ 
+@import "tailwindcss";
+
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html, body {
+    
+transition: background-color 200ms ease, color 200ms ease;
+}
+
+html, body, #root {
+    height: 100%;
+    color: slategray;
+     background-color: white; /*fallback */
+}

@@ -1,17 +1,46 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import SectionHeader from "../components/SectionHeader";
+import { addContactMessage } from "../firebase";
+import toast from "react-hot-toast";
+import confetti from "canvas-confetti";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [submitting, setSubmitting] = useState(false);
 
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Message sent successfully! (Form submission logic can be added)");
-    setFormData({ name: "", email: "", message: "" });
+    setSubmitting(true);
+
+    try {
+      await addContactMessage(formData);
+
+      // Confetti celebration
+      confetti({
+        particleCount: 150,
+        spread: 80,
+        origin: { y: 0.6 },
+      });
+
+      // Toast success
+      toast.success("Message sent successfully!");
+
+      setFormData({ name: "", email: "", message: "" });
+    } catch (err) {
+      console.error("Contact submission error:", err);
+      toast.error("Could not send message. Please try again later.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -28,12 +57,6 @@ const Contact = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <form action="https://formspree.io/f/xnnygqod"method="post">
-
-
-
-
-        
         <div className="mb-4">
           <label className="block mb-2 text-sm font-medium">Name</label>
           <input
@@ -72,14 +95,14 @@ const Contact = () => {
 
         <button
           type="submit"
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md font-medium transition"
+          disabled={submitting}
+          className="w-full bg-blue-600 hover:bg-blue-700 disabled:opacity-60 text-white py-2 rounded-md font-medium transition"
         >
-          Send Message
+          {submitting ? "Sending..." : "Send Message"}
         </button>
-        </form>
       </motion.form>
     </section>
   );
 };
 
-export default Contact;
+export default Contact;

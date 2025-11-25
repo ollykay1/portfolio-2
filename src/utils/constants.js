@@ -1,5 +1,5 @@
 export const SITE_NAME = "Ollykay Portfolio";
-export const SITE_URL = "https://portfolio-2-phi-one.vercel.app/";
+export const SITE_URL = "https://portfolio-2-s7r9.vercel.app";
 export const EMAIL = "ollykay86@gmail.com";
 
 export const SOCIALS = {

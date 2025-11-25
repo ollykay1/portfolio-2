@@ -9,5 +9,23 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Initializes Bootstrap form validation
+      grid.jpg = document.querySelectorAll('.needs-validation');
+
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+
+            form.classList.add('was-validated');
+          }, false);
+        });
+    });
+  </script>
   </body>
 </html>

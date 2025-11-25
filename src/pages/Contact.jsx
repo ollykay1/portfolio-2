@@ -28,6 +28,12 @@ const Contact = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
+        <form action="https://formspree.io/f/xnnygqod"method="post">
+
+
+
+
+        
         <div className="mb-4">
           <label className="block mb-2 text-sm font-medium">Name</label>
           <input
@@ -70,6 +76,7 @@ const Contact = () => {
         >
           Send Message
         </button>
+        </form>
       </motion.form>
     </section>
   );

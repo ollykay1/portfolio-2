@@ -6,18 +6,22 @@ const ProjectModal = ({ project, onClose }) => {
 
   return (
     <AnimatePresence>
+      {/* Overlay */}
       <motion.div
         className="fixed inset-0 bg-black/60 flex justify-center items-center z-50 px-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
+        onClick={onClose} // 👈 close when clicking the overlay
       >
+        {/* Modal content */}
         <motion.div
           className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl max-w-lg w-full p-6 relative border border-gray-300 dark:border-gray-700"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.8, opacity: 0 }}
           transition={{ type: "spring", stiffness: 200, damping: 20 }}
+          onClick={(e) => e.stopPropagation()} // 👈 prevent closing when clicking inside
         >
           <button
             onClick={onClose}
@@ -50,32 +54,32 @@ const ProjectModal = ({ project, onClose }) => {
           </div>
 
           {project.link && (
-  <div className="flex gap-4 mt-5">
-    <a
-      href={project.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-block text-center bg-blue-600 hover:bg-blue-500 text-white font-medium px-4 py-2 rounded-md transition"
-    >
-      View Project
-    </a>
+            <div className="flex gap-4 mt-5">
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-center bg-blue-600 hover:bg-blue-500 text-white font-medium px-4 py-2 rounded-md transition"
+              >
+                View Project
+              </a>
 
-    {project.github && (
-      <a
-        href={project.github}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-block text-center bg-red-800 hover:bg-red-500 text-white font-medium px-4 py-2 rounded-md transition"
-      >
-        🤖 Github Link
-      </a>
-    )}
-  </div>
-)}
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-center bg-red-800 hover:bg-red-500 text-white font-medium px-4 py-2 rounded-md transition"
+                >
+                  🤖 Github Link
+                </a>
+              )}
+            </div>
+          )}
         </motion.div>
       </motion.div>
     </AnimatePresence>
   );
 };
 
-export default ProjectModal;
+export default ProjectModal;
